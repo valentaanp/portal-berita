@@ -9,15 +9,17 @@ class ArtikelController extends Controller
 {
     public function index()
     {
-        $artikel = Artikel::all();
+        // $artikel = Artikel::all();
 
-        return view('artikel.index', compact('artikel'));
+        // return view('artikel.index', compact('artikel'));
+        return view('artikel.index');
     }
 
     public function show($id)
     {
-        $artikel = Artikel::findOrFail($id);
+        // $artikel = Artikel::findOrFail($id);
 
-        return view('artikel.detail', compact('artikel'));
+        // return view('artikel.detail', compact('artikel'));
+        return view('artikel.detail');
     }
 }
