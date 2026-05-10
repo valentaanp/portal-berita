@@ -9,10 +9,11 @@ class ArtikelController extends Controller
 {
     public function index()
     {
-        // $artikel = Artikel::all();
+        // return view('artikel.index');
 
-        // return view('artikel.index', compact('artikel'));
-        return view('artikel.index');
+        $artikels = Artikel::with(['kategori'])->latest()->get();
+
+        return view('artikel.index', compact('artikels'));
     }
 
     public function show($id)

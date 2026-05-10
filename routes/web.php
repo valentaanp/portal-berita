@@ -11,11 +11,10 @@ use App\Http\Controllers\ArtikelController;
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 
-Route::post('/login', [AuthController::class, 'index']);
-
 Route::get('/artikel', [ArtikelController::class, 'index']);
     
-    Route::get('/artikel/{id}', [ArtikelController::class, 'show']);
+Route::get('/artikel/{id}', [ArtikelController::class, 'show']);
+
 
 Route::middleware(['auth'])->group(function () {
 
